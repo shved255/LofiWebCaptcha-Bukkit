@@ -1,0 +1,4 @@
+name: LofiWebCaptcha
+version: 1.0
+main: ru.shved255.Main
+description: A plugin for web captcha verification.
