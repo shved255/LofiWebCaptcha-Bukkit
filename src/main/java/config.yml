@@ -1,12 +1,84 @@
-success: "&aПроверка успешно пройдена!"
+# RUS: Время которое будет у игрока на прохождение проверки, в секундах
+# ENG: Time given to the player to complete the verification, in seconds
+time: 60
+
+# RUS: Время сколько игрок будет верефицирован в player.yml (поставьте 0 если выключить)
+# ENG: Time for how long the player will be verified in player.yml (set to 0 to disable)
 hours: 72
-message: "Пожалуйста перейдите по ссылке решите рекапчу с устройства на котором вы играете: {url}"
+
+# RUS: Адрес сайта где будет находится index.php
+# ENG: Website address where index.php will be located
 site: "https://109.172.91.185:7777/v2652166.hosted-by-vdsina.ru"
-key: ""
-titleOn: true
-title: "Проверка"
-subTittle: "Перейдите по ссылке в чате и пройдите рекапчу, ПКМ по ссылке."
-titleNo: "Проверка"
-subTittleNo: "Проверка пройдена, поздравляем!"
+
+# RUS: Уникальный ключ сайта (также вводить на сайте)
+# ENG: Unique website key (also enter on the website)
+key: "123"
+
+# RUS: Команды которые будет вводить сервер после успешной проверки игрока, поставьте {PLAYER} если нужен ник игрока
+# ENG: Commands that the server will execute after the player successfully passes the verification, use {PLAYER} if the player's nickname is needed
 serverCommands: []
+
+# RUS: Команды от имени игрока
+# ENG: Commands executed as the player
 playerCommands: []
+
+# RUS: Настройки BossBar (полоски над интерфейсом)
+# ENG: BossBar settings (bar above the interface)
+bossbar:
+  # RUS: Включить ли BossBar?
+  # ENG: Enable BossBar?
+  enable: true
+
+  # RUS: Отображать ли таймер в BossBar?
+  # ENG: Display the timer in BossBar?
+  timer: true
+
+  # RUS: Цвет BossBar (например, RED, GREEN, BLUE и т.д.)
+  # ENG: BossBar color (e.g., RED, GREEN, BLUE, etc.)
+  color: RED
+
+  # RUS: Стиль BossBar (например, SEGMENTED_10, SOLID и т.д.)
+  # ENG: BossBar style (e.g., SEGMENTED_10, SOLID, etc.)
+  style: SEGMENTED_10
+
+  # RUS: Текст BossBar, {TIME} - оставшееся время
+  # ENG: BossBar text, {TIME} - remaining time
+  text: "&aРешите капчу по ссылке в чате, у Вас осталось {TIME}!"
+
+# RUS: Сообщения для игрока
+# ENG: Messages for the player
+messages:
+  # RUS: Сообщение которые будет писать игроку чтобы он прошел проверку, {url} - адрес сайта
+  # ENG: Message that will be sent to the player to complete the verification, {url} - website address
+  message: "Пожалуйста перейдите по ссылке решите рекапчу с устройства на котором вы играете: {url}"
+
+  # RUS: Причина кика после таймера если игрок не смог пройти проверку
+  # ENG: Reason for kicking the player after the timer if they fail to complete the verification
+  timeKick: "Вы не успели пройти проверку!"
+
+  # RUS: Сообщение если игрок успешно прошел проверку
+  # ENG: Message if the player successfully passes the verification
+  success: "&aПроверка успешно пройдена!"
+
+# RUS: Настройки тайтлов (текст на экране)
+# ENG: Titles settings (on-screen text)
+titles:
+  # RUS: Включить ли тайтлы?
+  # ENG: Enable titles?
+  titleOn: true
+
+  # RUS: Верх тайтла до успешной проверки игрока (при заходе), также есть поддержка цветов
+  # ENG: Top title before the player successfully passes the verification (on join), color support is available
+  title: "Проверка"
+
+  # RUS: Низ тайтла до успешной проверки игрока (при заходе), также есть поддержка цветов
+  # ENG: Subtitle before the player successfully passes the verification (on join), color support is available
+  subTittle: "Перейдите по ссылке в чате и пройдите рекапчу, ПКМ по ссылке."
+
+  # RUS: Верх тайтла после успешной проверки игрока, также есть поддержка цветов
+  # ENG: Top title after the player successfully passes the verification, color support is available
+  titleNo: "Проверка"
+
+  # RUS: Низ тайтла после успешной проверки игрока, также есть поддержка цветов
+  # ENG: Subtitle after the player successfully passes the verification, color support is available
+  subTittleNo: "Проверка пройдена, поздравляем!"

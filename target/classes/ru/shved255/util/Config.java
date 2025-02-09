@@ -26,23 +26,37 @@ public class Config {
     private int hours;
 	private List<String> commandsPlayer;
 	private List<String> commandsServer;
+	private int time;
+	private String timeKick;
+	private boolean barOn;
+	private boolean barTimer;
+	private String barStyle;
+	private String barColor;
+	private String barText;
     
     public Config(Main plugin) {
         this.plugin = plugin;
         File file = new File(plugin.getDataFolder() + File.separator, "config.yml"); 
         this.cfg = YamlConfiguration.loadConfiguration(file);
-        success = cfg.getString("success");
-        proverka = cfg.getString("message");
+        success = cfg.getString("messages.success");
+        proverka = cfg.getString("messages.message");
         site = cfg.getString("site");
         key = cfg.getString("key");
 	    commandsPlayer = cfg.getStringList("playerCommands");
 	    commandsServer = cfg.getStringList("serverCommands");
-	    title = cfg.getBoolean("titleOn");
-	    titleUp = cfg.getString("title");
-	    titleDown = cfg.getString("subTittle");
-	    titleUpNo = cfg.getString("titleNo");
-	    titleDownNo = cfg.getString("subTittleNo");
+	    title = cfg.getBoolean("titles.titleOn");
+	    titleUp = cfg.getString("titles.title");
+	    titleDown = cfg.getString("titles.subTittle");
+	    titleUpNo = cfg.getString("titles.titleNo");
+	    titleDownNo = cfg.getString("titles.subTittleNo");
 	    hours = cfg.getInt("hours");
+	    time = cfg.getInt("time");
+	    timeKick = cfg.getString("messages.timeKick");
+	    barOn = cfg.getBoolean("bossbar.enable");
+	    barTimer = cfg.getBoolean("bossbar.timer");
+	    barStyle = cfg.getString("bossbar.style");
+	    barColor = cfg.getString("bossbar.color");
+	    barText = cfg.getString("bossbar.text");
     }
     
     public FileConfiguration getConfig() {
@@ -104,5 +118,33 @@ public class Config {
 
 	public int getHours() {
 		return hours;
+	}
+
+	public int getTime() {
+		return time;
+	}
+
+	public String getTimeKick() {
+		return ChatColor(timeKick);
+	}
+
+	public String getBarText() {
+		return ChatColor(barText);
+	}
+
+	public boolean getBarOn() {
+		return barOn;
+	}
+
+	public boolean getBarTimer() {
+		return barTimer;
+	}
+
+	public String getBarStyle() {
+		return barStyle;
+	}
+
+	public String getBarColor() {
+		return barColor;
 	}
 }
